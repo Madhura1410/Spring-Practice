@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="department" class="com.SpringCoreLambok.Department">
+		<property name="departmentId" value="101"></property>
+		<property name="departmentName" value="Development"></property>
+		<property name="departmentLocation" value="Hyderabad" />
+	</bean>
+	<bean id="employee" class="com.SpringCoreLambok.Employee">
+		<property name="employeeId" value="1"></property>
+		<property name="employeeName" value="Madhu"></property>
+		<property name="employeeSalary" value="55000"></property>
+		<property name="Department" ref="department"></property>
+	</bean> 
+
+	<!-- <bean id="department" class="com.SpringCoreLambok.Department">
+
+		<constructor-arg value="101" />
+		<constructor-arg value="Development" />
+		<constructor-arg value="Hyderabad" />
+
+	</bean>
+
+	<bean id="employee" class="com.SpringCoreLambok.Employee">
+
+		<constructor-arg value="1" />
+		<constructor-arg value="Madhu" />
+		<constructor-arg value="55000" />
+		<constructor-arg ref="department" />
+
+	</bean> -->
+	
+	<!-- <bean id="department" class="com.SpringCoreLambok.Department">
+
+    <property name="departmentId" value="101"/>
+    <property name="departmentName" value="Development"/>
+    <property name="departmentLocation" value="Pune"/>
+
+</bean>
+
+<bean id="employee" class="com.SpringCoreLambok.Employee" autowire="byType">
+
+    <property name="employeeId" value="1"/>
+    <property name="employeeName" value="Madhu"/>
+    <property name="employeeSalary" value="55000"/>
+
+</bean> -->
+
+</beans>
