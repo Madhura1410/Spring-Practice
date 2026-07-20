@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="library" class="SpringCore.LibraryManagement.Library"
+		init-method="init" destroy-method="destroy">
+		<property name="libraryCode" value="2586"></property>
+		<property name="libraryName" value="SarasVati"></property>
+		<property name="inChargePerson" value="Smith"></property>
+		<property name="contactNumber" value="9658467564"></property>
+		<property name="genres">
+			<list>
+				<value>Mystery</value>
+				<value>Historical Fiction</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="library2" class="SpringCore.LibraryManagement.Library"
+		init-method="init" destroy-method="destroy" autowire-candidate="false">
+		<property name="libraryCode" value="2587"></property>
+		<property name="libraryName" value="Rampur Raza "></property>
+		<property name="inChargePerson" value="Ram"></property>
+		<property name="contactNumber" value="9658462567"></property>
+		<property name="genres">
+			<list>
+				<value>Science Fiction</value>
+				<value>Thriller / Suspense</value>
+			</list>
+		</property>
+	</bean>
+	
+		<bean id="library3"
+		class="SpringCore.LibraryManagement.Library"
+		init-method="init"
+		destroy-method="destroy"
+		autowire-candidate="false">
+
+		<property name="libraryCode" value="2588"/>
+		<property name="libraryName" value="National Library"/>
+		<property name="inChargePerson" value="Priya"/>
+		<property name="contactNumber" value="9876543210"/>
+
+		<property name="genres">
+			<list>
+				<value>Biography</value>
+				<value>Fantasy</value>
+			</list>
+		</property>
+
+	</bean>
+	<bean id="libraryService" class = "SpringCore.LibraryManagement.LibraryService" autowire="byType"></bean>
+
+</beans>
